@@ -1,0 +1,42 @@
+## how to run simulator
+make px4_sitl simulator[_vehicle-model]
+# for example,
+make px4_sitl gazebo_plane
+make px4_sitl gazebo_iris_opt_flow
+make px4_sitl jmavsim
+make px4_sitl none_iris
+
+## we can set simulator with speed factor
+export PX4_SIM_SPEED_FACTOR=2
+make ...
+
+## parameter description
+https://docs.px4.io/master/en/advanced_config/parameter_reference.html#sitl
+
+## overall guide
+https://docs.px4.io/master/en/simulation/
+
+## about generating simulation world
+https://docs.px4.io/master/en/dev_setup/building_px4.html#px4-make-build-targets
+
+## run a specific world
+sudo make px4_sitl_default gazebo_plane_cam__[world_name]
+
+list of world :
+baylands.world     hitl_standard_vtol.world  sonoma_raceway.world      windy.world
+boat.world         iris_irlock.world         typhoon_h480.world        yosemite.world
+empty.world        ksql_airport.world        uuv_bluerov2_heavy.world
+hippocampus.world  mcmillan_airfield.world   uuv_hippocampus.world
+hitl_iris.world    ocean.world               warehouse.world
+
+## about connection between ros, and px4
+# default ros
+roslaunch mavros px4.launch fcu_url:="udp://:14540@192.168.1.36:14557"
+
+## supported sensors in px4
+rplidar, opt_flow, (dual)gps, vision, 
+# show the list of all (flying)build targets
+make px4_sitl list_vmd_make_targets
+
+## gazebo simulation links
+https://docs.px4.io/master/en/simulation/gazebo.html
