@@ -40,3 +40,6 @@ make px4_sitl list_vmd_make_targets
 
 ## gazebo simulation links
 https://docs.px4.io/master/en/simulation/gazebo.html
+
+## gazebo rplidar spec : https://www.slamtec.com/en/Lidar/A3Spec
+sudo cp tips/rplidarA3model/model.sdf ~/src/Firmware/Tools/sitl_gazebo/models/rplidar/

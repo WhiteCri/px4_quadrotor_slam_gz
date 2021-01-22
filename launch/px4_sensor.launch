@@ -52,9 +52,10 @@
         <arg name="respawn_mavros" value="$(arg respawn_mavros)"/>
     </include>
 
-    <!-- tf for rplidar -->
-    <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0 0 1 0 0 0 base_link rplidar_link 10" />
-
+    <!-- tf -->
+    <node pkg="px4_quad_slam_simulation" type="map_baselink_broadcaster" name="map_baselink_broadcaster"/>
+    <node pkg="tf" type="static_transform_publisher" name="baselink2rplidar" args="0 0 1 0 0 0 base_link rplidar_link 10" />
+    
     <!-- rviz -->
     <node pkg="rviz" type="rviz" name="rviz" args="-d $(find px4_quad_slam_simulation)/rviz/default.rviz" />>
 
