@@ -31,8 +31,7 @@ int main(int argc, char *argv[]){
         
         odom_trans.header.seq = odom.header.seq;
         odom_trans.header.stamp = ros::Time::now();
-        odom_trans.header.frame_id = "odom"; //original's frame_id is "map", but i will handle this
-        //as a odometry frame. 
+        odom_trans.header.frame_id = "map"; //mavros frame
         odom_trans.child_frame_id = odom.child_frame_id;
 
         odom_trans.transform.translation.x      = odom.pose.pose.position.x;

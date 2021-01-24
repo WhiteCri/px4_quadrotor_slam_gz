@@ -6,7 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /Odometry1
+        - /LaserScan1
         - /Odometry1/Shape1
       Splitter Ratio: 0.5
     Tree Height: 555
@@ -69,15 +69,15 @@ Visualization Manager:
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: -999999
+      Max Intensity: 0
       Min Color: 0; 0; 0
-      Min Intensity: 999999
+      Min Intensity: 0
       Name: LaserScan
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.10000000149011612
+      Size (m): 0.05000000074505806
       Style: Flat Squares
       Topic: /laser/scan
       Unreliable: false
@@ -143,12 +143,12 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        base_link:
-          base_link_frd:
-            {}
-          rplidar_link:
-            {}
         map:
+          base_link:
+            base_link_frd:
+              {}
+            rplidar_link:
+              {}
           map_ned:
             {}
       Update Interval: 0
@@ -181,25 +181,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 9.050699234008789
+      Distance: 14.241450309753418
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: -0.40325385332107544
+        Y: 0.5448830127716064
+        Z: -0.11328159272670746
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.529797375202179
+      Pitch: 1.3797966241836548
       Target Frame: base_link
       Value: Orbit (rviz)
-      Yaw: 2.465000629425049
+      Yaw: 2.7350029945373535
     Saved: ~
 Window Geometry:
   Displays:
