@@ -1,7 +1,15 @@
 #!/bin/bash
-#must be run with root previleges. You can do it with "sudo -i"
+# must be run with root previleges. You can do it with "sudo -i"
 
-world="warehouse"
+## list of worlds
+
+# list of world :
+# baylands.world     hitl_standard_vtol.world  sonoma_raceway.world      windy.world
+# boat.world         iris_irlock.world         typhoon_h480.world        yosemite.world
+# empty.world        ksql_airport.world        uuv_bluerov2_heavy.world
+# hippocampus.world  mcmillan_airfield.world   uuv_hippocampus.world
+# hitl_iris.world    ocean.world               warehouse.world
+world="baylands"
 vehicle="iris_rplidar"
 
 cd ~/src/Firmware

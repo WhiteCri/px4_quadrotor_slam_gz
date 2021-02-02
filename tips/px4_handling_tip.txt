@@ -38,7 +38,7 @@ rplidar, opt_flow, (dual)gps, vision,
 # show the list of all (flying)build targets
 make px4_sitl list_vmd_make_targets
 
-## gazebo simulation links
+## gazebo simulation link
 https://docs.px4.io/master/en/simulation/gazebo.html
 
 ## gazebo rplidar spec : https://www.slamtec.com/en/Lidar/A3Spec
