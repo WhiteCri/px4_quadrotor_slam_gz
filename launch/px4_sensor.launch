@@ -3,8 +3,11 @@
     <!-- MAVROS posix SITL environment launch script -->
     <!-- launches MAVROS, PX4 SITL, Gazebo environment, and spawns vehicle -->
     <!-- vehicle pose -->
+    
+    <!-- baylands -->
     <arg name="x" default="-245"/>
     <arg name="y" default="40"/>
+    
     <arg name="z" default="0"/>
     <arg name="R" default="0"/>
     <arg name="P" default="0"/>
@@ -16,9 +19,9 @@
     <arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf"/>
 
     <!-- gazebo configs -->
-    <arg name="gui" default="false"/>
+    <arg name="gui" default="true"/>
     <arg name="debug" default="false"/>
-    <arg name="verbose" default="false"/>
+    <arg name="verbose" default="true"/>
     <arg name="paused" default="false"/>
     <arg name="respawn_gazebo" default="false"/>
     <!-- MAVROS configs -->
@@ -61,5 +64,4 @@
 
     <!-- planner -->
     <!-- <include file="$(find px4_quad_path_planning)/launch/px4_move_base.launch"/> -->
-
 </launch>

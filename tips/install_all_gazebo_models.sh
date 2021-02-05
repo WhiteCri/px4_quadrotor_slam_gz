@@ -14,3 +14,6 @@ done
 
 # Copy extracted files to the local model folder
 cp -vfR * "$HOME/.gazebo/models/"
+
+#remove original file
+rm -rf models.gazebosim.org/

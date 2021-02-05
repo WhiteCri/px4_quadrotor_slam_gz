@@ -1,0 +1,58 @@
+## this guide is tested on Ubuntu 18.04 with nvidia 460.32 installed
+
+## if errors occur with below cmds, you must resolve it.
+
+# install ros, mavros, gazebo and build pkgs
+wget https://raw.githubusercontent.com/PX4/Devguide/master/build_scripts/ubuntu_sim_ros_melodic.sh
+source ubuntu_sim_ros_melodic.sh 
+cd ~/catkin_ws/src
+catkin build
+ 
+# build PX4 Firmware
+mkdir src
+cd src
+git clone https://github.com/PX4/Firmware.git
+cd Firmware
+sudo apt install python3-pip
+pip3 install --user empy
+pip3 install --user pyros-genmsg
+pip3 install --user packaging
+pip3 install --user toml
+pip3 install --user numpy
+pip3 install --user jinja2
+sudo make px4_sitl jmavsim
+
+# install QgroundControl
+# go to link and download it on ~/Download
+sudo usermod -a -G dialout $USER
+sudo apt-get remove modemmanager -y
+sudo apt autoremove
+sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
+cd ~/Downloads
+chmod +x ./QGroundControl.AppImage
+
+# logout and login again and
+
+# execute gazebo sim without ROS
+cd src/Firmware/
+sudo apt install libgstreamer1.0-dev
+sudo make px4_sitl gazebo
+
+
+## baylands simulation specific cmds
+#change rplidar model
+sudo cp -r ~/catkin_ws/src/px4_quadrotor_slam_gz/tips ~/src/Firmware/Tools/sitl_gazebo/models
+# execute standalone simulation. this may take a long time
+sudo make px4_sitl gazebo_iris_rplidar__baylands
+# execute "takeoff" cmd in QGroundControl, then the drone should fly
+
+## ROS-gazebo path planning
+# close every terminal and execute below lines
+# in terminal 1
+cd ~/Downloads
+./QGroundControl
+# in terminal 2 
+cd ~/catkin_ws/src/px4_quadrotor_slam_gz
+sudo ./px4_gazebo_sensor.sh
+# in terminal 3
+roslaunch px4_quad_path_planning px4_move_base.launch --screen
