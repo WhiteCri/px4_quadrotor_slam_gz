@@ -43,3 +43,6 @@ https://docs.px4.io/master/en/simulation/gazebo.html
 
 ## gazebo rplidar spec : https://www.slamtec.com/en/Lidar/A3Spec
 sudo cp tips/rplidarA3model/model.sdf ~/src/Firmware/Tools/sitl_gazebo/models/rplidar/
+
+## to modify or add new world, it's better to replace px4's world with yours. the path is
+~/src/Firmware/Tools/sitl_gazebo/worlds

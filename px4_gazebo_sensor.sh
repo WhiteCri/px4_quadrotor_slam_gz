@@ -9,7 +9,7 @@
 # empty.world        ksql_airport.world        uuv_bluerov2_heavy.world
 # hippocampus.world  mcmillan_airfield.world   uuv_hippocampus.world
 # hitl_iris.world    ocean.world               warehouse.world
-world="baylands"
+world="warehouse"
 vehicle="iris_rplidar"
 
 cd ~/src/Firmware

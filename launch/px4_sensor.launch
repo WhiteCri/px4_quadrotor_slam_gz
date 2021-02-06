@@ -5,17 +5,20 @@
     <!-- vehicle pose -->
     
     <!-- baylands -->
-    <arg name="x" default="-245"/>
-    <arg name="y" default="40"/>
+    <!-- <arg name="x" default="-245"/>
+    <arg name="y" default="40"/> -->
     
-    <arg name="z" default="0"/>
+    <arg name="x" default="-9.25"/>
+    <arg name="y" default="-1.55"/>
+    
+    <arg name="z" default="0.1"/>
     <arg name="R" default="0"/>
     <arg name="P" default="0"/>
     <arg name="Y" default="0"/>
     <!-- vehicle model and world -->
     <arg name="est" default="ekf2"/>
     <arg name="vehicle" default="iris_rplidar"/>
-    <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/baylands.world"/>
+    <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/warehouse.world"/>
     <arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf"/>
 
     <!-- gazebo configs -->
