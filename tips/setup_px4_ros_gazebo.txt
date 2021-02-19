@@ -56,3 +56,6 @@ cd ~/catkin_ws/src/px4_quadrotor_slam_gz
 sudo ./px4_gazebo_sensor.sh
 # in terminal 3
 roslaunch px4_quad_path_planning px4_move_base.launch --screen
+
+## about camera-imu calibration 
+https://github.com/ethz-asl/kalibr/wiki/camera-imu-calibration

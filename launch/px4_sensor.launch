@@ -66,5 +66,9 @@
     <node pkg="rviz" type="rviz" name="rviz" args="-d $(find px4_quad_slam_simulation)/rviz/default.rviz" />>
 
     <!-- planner -->
-    <!-- <include file="$(find px4_quad_path_planning)/launch/px4_move_base.launch"/> -->
+    <include file="$(find px4_quad_path_planning)/launch/px4_move_base.launch"/>
+
+    <!-- vio -->
+    <!-- <include file="$(find px4_quad_slam_simulation)/launch/open_vins_px4.launch"/> -->
+
 </launch>
