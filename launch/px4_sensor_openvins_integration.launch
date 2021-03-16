@@ -3,23 +3,14 @@
     <!-- MAVROS posix SITL environment launch script -->
     <!-- launches MAVROS, PX4 SITL, Gazebo environment, and spawns vehicle -->
     <!-- vehicle pose -->
-  <param name="use_sim_time" value="true"/>
-
     
     <!-- baylands -->
     <!-- <arg name="x" default="-245"/>
     <arg name="y" default="40"/> -->
-     
     
-    <!-- darpa_maze -->
-    <arg name="x" default="2.0"/>
+    <arg name="x" default="1.5"/>
     <arg name="y" default="-1"/>
     
-    <!-- kdarpa easy, medium -->
-    <!-- <arg name="x" default="0"/>
-    <arg name="y" default="0"/>
-     -->
-
     <arg name="z" default="0.1"/>
     <arg name="R" default="0"/>
     <arg name="P" default="0"/>
@@ -68,16 +59,17 @@
     </include>
 
     <!-- tf -->
-    <node pkg="px4_quad_slam_simulation" type="map_baselink_broadcaster" name="map_baselink_broadcaster"/>
     <node pkg="tf" type="static_transform_publisher" name="baselink2rplidar" args="0 0 0.1 0 0 0 base_link rplidar_link 10" />
+    <!-- I know this is confusing, but to make this alright, I must change the open source, and that crashes unity -->
+    <node pkg="tf" type="static_transform_publisher" name="imu2baselink" args="0 0 0.1 0 0 0 imu base_link 10" />
     
     <!-- rviz -->
-    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find px4_quad_slam_simulation)/rviz/default.rviz" />>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find px4_quad_slam_simulation)/rviz/openvins_integration.rviz" />>
 
     <!-- planner -->
-    <!-- <include file="$(find px4_quad_path_planning)/launch/px4_move_base.launch"/> -->
+    <include file="$(find px4_quad_path_planning)/launch/px4_openvins.launch"/>
 
     <!-- vio -->
-    <!-- <include file="$(find px4_quad_slam_simulation)/launch/open_vins_px4.launch"/> -->
+    <include file="$(find px4_quad_slam_simulation)/launch/open_vins_px4.launch"/>
 
 </launch>

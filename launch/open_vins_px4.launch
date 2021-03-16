@@ -119,5 +119,5 @@
  
 
     </node>
-    <node pkg="rviz" type="rviz" name="rviz2" args="-d $(find ov_msckf)/launch/display.rviz" />
+    <!-- <node pkg="rviz" type="rviz" name="rviz2" args="-d $(find ov_msckf)/launch/display.rviz" /> -->
 </launch>
