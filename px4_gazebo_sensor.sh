@@ -12,7 +12,7 @@
 world="warehouse"
 vehicle="iris_rplidar"
 
-cd ~/src/PX4-Autopilot
+cd ~/lib/PX4-Autopilot
 DONT_RUN=1 make px4_sitl gazebo_${vehicle}__${world}
 source ~/catkin_ws/devel/setup.bash
 source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default
