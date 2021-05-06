@@ -3,14 +3,23 @@
     <!-- MAVROS posix SITL environment launch script -->
     <!-- launches MAVROS, PX4 SITL, Gazebo environment, and spawns vehicle -->
     <!-- vehicle pose -->
+  <param name="use_sim_time" value="true"/>
+
     
     <!-- baylands -->
     <!-- <arg name="x" default="-245"/>
     <arg name="y" default="40"/> -->
+     
     
-    <arg name="x" default="1.5"/>
+    <!-- darpa_maze -->
+    <arg name="x" default="2.0"/>
     <arg name="y" default="-1"/>
     
+    <!-- kdarpa easy, medium -->
+    <!-- <arg name="x" default="0"/>
+    <arg name="y" default="0"/>
+     -->
+
     <arg name="z" default="0.1"/>
     <arg name="R" default="0"/>
     <arg name="P" default="0"/>
@@ -22,7 +31,7 @@
     <arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf"/>
 
     <!-- gazebo configs -->
-    <arg name="gui" default="true"/>
+    <arg name="gui" default="false"/>
     <arg name="debug" default="false"/>
     <arg name="verbose" default="true"/>
     <arg name="paused" default="false"/>
@@ -50,9 +59,9 @@
         <arg name="paused" value="$(arg paused)"/>
         <arg name="respawn_gazebo" value="$(arg respawn_gazebo)"/>
     </include>
+        <!-- GCS link is provided by SITL -->
     <!-- MAVROS -->
     <include file="$(find mavros)/launch/px4.launch">
-        <!-- GCS link is provided by SITL -->
         <arg name="gcs_url" value=""/>
         <arg name="fcu_url" value="$(arg fcu_url)"/>
         <arg name="respawn_mavros" value="$(arg respawn_mavros)"/>
@@ -64,10 +73,10 @@
     <node pkg="tf" type="static_transform_publisher" name="imu2baselink" args="0 0 0.1 0 0 0 imu base_link 10" />
     
     <!-- rviz -->
-    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find px4_quad_slam_simulation)/rviz/openvins_integration.rviz" />>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find px4_quad_slam_simulation)/rviz/default.rviz" />>
 
     <!-- planner -->
-    <include file="$(find px4_quad_path_planning)/launch/px4_openvins.launch"/>
+    <!-- <include file="$(find px4_quad_path_planning)/launch/px4_openvins.launch"/> -->
 
     <!-- vio -->
     <include file="$(find px4_quad_slam_simulation)/launch/open_vins_px4.launch"/>
