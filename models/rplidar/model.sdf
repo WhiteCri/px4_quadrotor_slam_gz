@@ -1,11 +1,11 @@
 <?xml version="1.0" ?>
-<sdf version="1.5"> 
+<sdf version="1.5">
   <model name="rplidar">
     <link name="link">
 
       <inertial>
         <pose>0 0 0 0 0 0</pose>
-        <mass>0.0000000001</mass>
+        <mass>0.19</mass>
         <inertia>
           <ixx>4.15e-6</ixx>
           <ixy>0</ixy>
@@ -52,10 +52,10 @@
         </plugin>
         <always_on>1</always_on>
         <update_rate>15</update_rate>
-        <visualize>true</visualize>
+        <visualize>false</visualize>
       </sensor>
     </link>
   </model>
-</sdf> 
+</sdf>
 
 <!-- vim: set et fenc= ff=unix sts=0 sw=2 ts=2 : -->

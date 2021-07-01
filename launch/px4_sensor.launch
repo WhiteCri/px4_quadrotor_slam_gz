@@ -12,18 +12,27 @@
      
     
     <!-- darpa_maze -->
-    <arg name="x" default="2.0"/>
-    <arg name="y" default="-1"/>
+    <!-- <arg name="x" default="2.0"/>
+    <arg name="y" default="-1"/> -->
     
     <!-- kdarpa easy, medium -->
     <!-- <arg name="x" default="0"/>
     <arg name="y" default="0"/>
      -->
 
+    <!-- fast_planner_world -->
+    <arg name="x" default="5"/>
+    <arg name="y" default="0"/>
+    <arg name="Y" default="3.141592653989"/>
+
+    <!-- sonoma_raceway
+     <arg name="x" default="0"/>
+    <arg name="y" default="0"/> -->
+
     <arg name="z" default="0.1"/>
     <arg name="R" default="0"/>
     <arg name="P" default="0"/>
-    <arg name="Y" default="0"/>
+    <!-- <arg name="Y" default="0"/> -->
     <!-- vehicle model and world -->
     <arg name="est" default="ekf2"/>
     <arg name="vehicle" default="iris_rplidar"/>
@@ -59,7 +68,8 @@
         <arg name="paused" value="$(arg paused)"/>
         <arg name="respawn_gazebo" value="$(arg respawn_gazebo)"/>
     </include>
-        <!-- GCS link is provided by SITL -->
+    <!-- GCS link is provided by SITL -->
+    
     <!-- MAVROS -->
     <include file="$(find mavros)/launch/px4.launch">
         <arg name="gcs_url" value=""/>

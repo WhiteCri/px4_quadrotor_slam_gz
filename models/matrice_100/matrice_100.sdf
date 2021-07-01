@@ -144,7 +144,7 @@
     </joint>
 
     <!--<plugin name="rotor_0_top_blade" filename="libLiftDragPlugin.so">-->
-      <!--<alpha0>0.05984281113</alpha0>-->
+      <!--<a0>0.05984281113</a0>-->
       <!--<cla>4.752798721</cla>-->
       <!--<cda>0.6417112299</cda>-->
       <!--<cma>0.0</cma>-->
@@ -161,7 +161,7 @@
     <!--</plugin>-->
 
     <!--<plugin name="rotor_0_bottom_blade" filename="libLiftDragPlugin.so">-->
-      <!--<alpha0>0.05984281113</alpha0>-->
+      <!--<a0>0.05984281113</a0>-->
       <!--<cla>4.752798721</cla>-->
       <!--<cda>0.6417112299</cda>-->
       <!--<cma>0.0</cma>-->
@@ -283,7 +283,7 @@
     </joint>
 
     <!--<plugin name="rotor_1_top_blade" filename="libLiftDragPlugin.so">-->
-      <!--<alpha0>0.05984281113</alpha0>-->
+      <!--<a0>0.05984281113</a0>-->
       <!--<cla>4.752798721</cla>-->
       <!--<cda>0.6417112299</cda>-->
       <!--<cma>0.0</cma>-->
@@ -300,7 +300,7 @@
     <!--</plugin>-->
 
     <!--<plugin name="rotor_1_bottom_blade" filename="libLiftDragPlugin.so">-->
-      <!--<alpha0>0.05984281113</alpha0>-->
+      <!--<a0>0.05984281113</a0>-->
       <!--<cla>4.752798721</cla>-->
       <!--<cda>0.6417112299</cda>-->
       <!--<cma>0.0</cma>-->
@@ -422,7 +422,7 @@
     </joint>
 
     <!--<plugin name="rotor_2_top_blade" filename="libLiftDragPlugin.so">-->
-      <!--<alpha0>0.05984281113</alpha0>-->
+      <!--<a0>0.05984281113</a0>-->
       <!--<cla>4.752798721</cla>-->
       <!--<cda>0.6417112299</cda>-->
       <!--<cma>0.0</cma>-->
@@ -439,7 +439,7 @@
     <!--</plugin>-->
 
     <!--<plugin name="rotor_2_bottom_blade" filename="libLiftDragPlugin.so">-->
-      <!--<alpha0>0.05984281113</alpha0>-->
+      <!--<a0>0.05984281113</a0>-->
       <!--<cla>4.752798721</cla>-->
       <!--<cda>0.6417112299</cda>-->
       <!--<cma>0.0</cma>-->
@@ -561,7 +561,7 @@
     </joint>
 
     <!--<plugin name="rotor_3_top_blade" filename="libLiftDragPlugin.so">-->
-      <!--<alpha0>0.05984281113</alpha0>-->
+      <!--<a0>0.05984281113</a0>-->
       <!--<cla>4.752798721</cla>-->
       <!--<cda>0.6417112299</cda>-->
       <!--<cma>0.0</cma>-->
@@ -578,7 +578,7 @@
     <!--</plugin>-->
 
     <!--<plugin name="rotor_3_bottom_blade" filename="libLiftDragPlugin.so">-->
-      <!--<alpha0>0.05984281113</alpha0>-->
+      <!--<a0>0.05984281113</a0>-->
       <!--<cla>4.752798721</cla>-->
       <!--<cda>0.6417112299</cda>-->
       <!--<cma>0.0</cma>-->
