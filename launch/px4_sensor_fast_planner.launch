@@ -23,7 +23,7 @@
     <!-- fast_planner_world -->
     <arg name="x" default="0"/>
     <arg name="y" default="0"/>
-    <arg name="Y" default="0.0"/>
+    <arg name="Y" default="0"/>
 
     <!-- sonoma_raceway
      <arg name="x" default="0"/>

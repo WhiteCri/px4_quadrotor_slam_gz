@@ -43,7 +43,7 @@
 
     <include>
       <uri>model://kinect</uri>
-      <pose>0.2 0 0 0 0 0</pose>
+      <pose>0 0 0.2 0 0 0</pose>
     </include>
     <joint name="kinect_joint" type="revolute">
       <child>kinect::link</child>

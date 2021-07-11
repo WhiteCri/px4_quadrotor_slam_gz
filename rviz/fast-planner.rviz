@@ -6,7 +6,6 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /given_sensors1
       Splitter Ratio: 0.5
     Tree Height: 353
   - Class: rviz/Selection
@@ -93,12 +92,12 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: Intensity
       Decay Time: 0
-      Enabled: true
+      Enabled: false
       Invert Rainbow: true
       Max Color: 255; 255; 255
-      Max Intensity: 4.949999809265137
+      Max Intensity: 2.3499999046325684
       Min Color: 0; 0; 0
-      Min Intensity: 0.15000000596046448
+      Min Intensity: 0.05000000074505806
       Name: occupancy_inflate
       Position Transformer: XYZ
       Queue Size: 10
@@ -110,7 +109,7 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: true
+      Value: false
     - Class: rviz/Marker
       Enabled: true
       Marker Topic: /sdf_map/update_range
@@ -184,7 +183,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: Intensity
       Decay Time: 0
-      Enabled: false
+      Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Max Intensity: 4.949999809265137
@@ -201,7 +200,7 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: false
+      Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
@@ -267,25 +266,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 19.918405532836914
+      Distance: 13.573835372924805
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 2.8194055557250977
-        Y: 0.8710212707519531
-        Z: -5.7220458984375e-6
+        X: -1.3515386581420898
+        Y: 1.1280479431152344
+        Z: -1.049041748046875e-5
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.36979806423187256
+      Pitch: 0.4797981381416321
       Target Frame: world
       Value: ThirdPersonFollower (rviz)
-      Yaw: 3.142299175262451
+      Yaw: 4.702312469482422
     Saved: ~
 Window Geometry:
   Displays:

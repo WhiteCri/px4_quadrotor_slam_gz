@@ -32,7 +32,7 @@
       <gravity>1</gravity>
 
       <sensor name="d435_color" type="camera">
-	<pose>0.2 0 0 1.5707 -1.5707 0</pose>
+	<pose>0 0 0 1.5707 -1.5707 0</pose>
         <camera name="d435">
           <horizontal_fov>1.2112585009</horizontal_fov> <!-- ${69.4*deg_to_rad} -->
           <image>
@@ -55,7 +55,7 @@
         <visualize>1</visualize>
       </sensor>
       <sensor name="d435_ired1" type="camera">
-	<pose>0.2 0 0 1.5707 -1.5707 0</pose>
+	<pose>0 0 0 1.5707 -1.5707 0</pose>
         <camera name="d435">
           <horizontal_fov>1.487020</horizontal_fov> <!-- ${85.2*deg_to_rad} -->
            <image>
@@ -78,7 +78,7 @@
         <visualize>0</visualize>
       </sensor>
       <sensor name="d435_ired2" type="camera">
-	<pose>0.2 0 0 1.5707 -1.5707 0</pose>
+	<pose>0 0 0 1.5707 -1.5707 0</pose>
         <camera name="d435">
           <horizontal_fov>1.487020</horizontal_fov> <!-- ${85.2*deg_to_rad} -->
           <image>
@@ -101,7 +101,7 @@
         <visualize>0</visualize>
       </sensor>
       <sensor name="d435_depth" type="depth">
-	<pose>0.2 0 0 1.5707 -1.5707 0</pose>
+	<pose>0 0 0 1.5707 -1.5707 0</pose>
         <camera name="d435">
           <horizontal_fov>1.487020</horizontal_fov> <!-- ${85.2*deg_to_rad} -->
           <image>

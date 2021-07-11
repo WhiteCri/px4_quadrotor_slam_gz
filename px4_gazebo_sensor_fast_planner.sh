@@ -1,5 +1,4 @@
 #!/bin/bash
-# must be run with root previleges. You can do it with "sudo -i"
 
 ## list of worlds
 
